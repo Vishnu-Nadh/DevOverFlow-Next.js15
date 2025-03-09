@@ -1,3 +1,8 @@
 export default function Home() {
-  return <h1 className="shadow-light-300">Welcome to DevOverFlow</h1>;
+  return (
+    <div className="background-light850_dark100">
+      <h1 className="">Welcome to DevOverFlow</h1>
+      <button className="btn-secondary">Button</button>
+    </div>
+  );
 }
