@@ -292,6 +292,16 @@ code {
 }
 
 @layer utilities {
+  .auth_bg {
+    background: var(--bg-auth-light);
+    @apply bg-center bg-cover bg-no-repeat;
+  }
+
+  .dark .auth_bg {
+    background: var(--bg-auth-dark);
+    @apply bg-center bg-cover bg-no-repeat;
+  }
+
   .background-light850_dark100 {
     @apply bg-light-850;
   }
