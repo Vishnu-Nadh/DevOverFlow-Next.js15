@@ -382,6 +382,14 @@ code {
     @apply !bg-dark-400;
   }
 
+  .background-light700_dark300 {
+    @apply !bg-light-700;
+  }
+
+  .dark .background-light700_dark300 {
+    @apply !bg-dark-300;
+  }
+
   .text-dark100_light900 {
     @apply !text-dark-100;
   }
