@@ -20,7 +20,7 @@ const MobileNavigation = () => {
       <SheetContent side="left" className="background-light900_dark200 border-none p-6">
         <SheetTitle className="hidden">Navigation</SheetTitle>
         <Link href={ROUTES.HOME} className="flex items-center gap-1">
-          <Image src={"/images/site-logo.svg"} width={23} height={23} alt="Logo" />
+          <Image src="/images/site-logo.svg" width={23} height={23} alt="Logo" />
           <p className="h2-bold font-space-grotesk text-dark100_light900">
             Dev <span className="text-primary-500">OverFlow</span>
           </p>
