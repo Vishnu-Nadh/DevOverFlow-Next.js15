@@ -17,10 +17,10 @@ const TagCard = ({ _id, name, questions, showCount, compact }: Props) => {
   return (
     <Link href={ROUTES.TAGS(_id)} className="flex justify-between gap-2">
       <Badge className="subtle-medium background-light800_dark300 text-light400_dark500 rounded-md border-none px-4 py-2 uppercase">
-        <div className="flex-center space-x-2">
+        <span className="flex-center space-x-2">
           <i className={`${iconClass} text-sm`}></i>
           <span>{name}</span>
-        </div>
+        </span>
       </Badge>
       {showCount && <p className="text-dark500_light700 small-medium">{questions}</p>}
     </Link>
