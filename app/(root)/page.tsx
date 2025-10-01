@@ -1,3 +1,4 @@
+import QuestionCard from "@/components/cards/QuestionCard";
 import HomeFilter from "@/components/filters/HomeFilter";
 import LocalSearch from "@/components/Search/LocalSearch";
 import { Button } from "@/components/ui/button";
@@ -13,7 +14,7 @@ const dummyQuestions = [
       { _id: "1", name: "React" },
       { _id: "2", name: "Next.js" },
     ],
-    author: { _id: "1", name: "John Doe" },
+    author: { _id: "1", name: "John Doe", image: "https://randomuser.me/api/portraits/men/1.jpg" },
     upvotes: 20,
     answers: 4,
     views: 444,
@@ -27,7 +28,7 @@ const dummyQuestions = [
       { _id: "3", name: "React" },
       { _id: "4", name: "Redux" },
     ],
-    author: { _id: "2", name: "Alice Smith" },
+    author: { _id: "2", name: "Alice Smith", image: "https://randomuser.me/api/portraits/women/2.jpg" },
     upvotes: 35,
     answers: 6,
     views: 872,
@@ -41,7 +42,7 @@ const dummyQuestions = [
       { _id: "5", name: "JavaScript" },
       { _id: "6", name: "Node.js" },
     ],
-    author: { _id: "3", name: "Bob Johnson" },
+    author: { _id: "3", name: "Bob Johnson", image: "https://randomuser.me/api/portraits/men/3.jpg" },
     upvotes: 50,
     answers: 10,
     views: 1340,
@@ -55,7 +56,7 @@ const dummyQuestions = [
       { _id: "7", name: "React" },
       { _id: "8", name: "Next.js" },
     ],
-    author: { _id: "4", name: "Emily Davis" },
+    author: { _id: "4", name: "Emily Davis", image: "https://randomuser.me/api/portraits/women/4.jpg" },
     upvotes: 18,
     answers: 2,
     views: 367,
@@ -69,7 +70,7 @@ const dummyQuestions = [
       { _id: "9", name: "Next.js" },
       { _id: "10", name: "Vercel" },
     ],
-    author: { _id: "5", name: "Michael Brown" },
+    author: { _id: "5", name: "Michael Brown", image: "https://randomuser.me/api/portraits/men/5.jpg" },
     upvotes: 42,
     answers: 8,
     views: 1025,
@@ -83,7 +84,7 @@ const dummyQuestions = [
       { _id: "11", name: "Tailwind CSS" },
       { _id: "12", name: "React" },
     ],
-    author: { _id: "6", name: "Sophia Wilson" },
+    author: { _id: "6", name: "Sophia Wilson", image: "https://randomuser.me/api/portraits/women/6.jpg" },
     upvotes: 25,
     answers: 5,
     views: 590,
@@ -123,7 +124,7 @@ const Home = async ({ searchParams }: SearchParams) => {
       <HomeFilter />
       <div className="mt-10 flex w-full flex-col gap-6">
         {filteredQuestions?.map((question) => {
-          return <h1 key={question._id}>{question.title}</h1>;
+          return <QuestionCard key={question._id} question={question} />;
         })}
       </div>
     </>
